@@ -30,7 +30,7 @@
 
             }
 
-            $sql = "SELECT `name`  FROM `teachers`";
+            $sql = "SELECT `name`, `email`  FROM `students`";
             $result = $connection->query($sql);
 
             if($result && $result->num_rows > 0)  {
@@ -38,6 +38,8 @@
                 while($row = $result->fetch_assoc()) {
 
                     echo "<h4 style=display:inline;> Name: </h4>". $row['name'] . "<br>";
+
+                    echo "<h4 style=display:inline;> Email: </h4>". $row['email'] . "<br><br>";
 
                 }
 
